@@ -21,6 +21,13 @@ stages:          # List of stages for jobs, and their order of execution
   - test
   - deploy
 
+build-job:   
+  stage: build  
+  script:
+    - echo "Running unit tests... This will take about 60 seconds."
+    - sleep 60
+    - echo "Code coverage is 90%"
+
 unit-test-job:   # This job runs in the test stage.
   stage: test    # It only starts when the job in the build stage completes successfully.
   script:
@@ -41,23 +48,3 @@ deploy-job:      # This job runs in the deploy stage.
   script:
     - echo "Deploying application..."
     - echo "Application successfully deployed."
-
-deploy-swagger:
-  image: python:3
-  stage: deploy
-  script:
-    - cd source/
-    - pip install -r requirements.txt
-    - python build_file.py > swagger.yml
-  artifacts:
-    paths:
-      - source/swagger.yml
-
-deploy-dotnet:
-  image: mcr.microsoft.com/dotnet/core/sdk:3.1
-  stage: deploy
-  dependencies:
-    - deploy-swagger
-  script:
-    - ls -l source/swagger.yml
-    - ...
