@@ -24,9 +24,7 @@ stages:          # List of stages for jobs, and their order of execution
 build-job:   
   stage: build  
   script:
-    - echo "Running unit tests... This will take about 60 seconds."
-    - sleep 60
-    - echo "Code coverage is 90%"
+    - python -m test_example.py
 
 unit-test-job:   # This job runs in the test stage.
   stage: test    # It only starts when the job in the build stage completes successfully.
