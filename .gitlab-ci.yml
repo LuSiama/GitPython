@@ -24,7 +24,9 @@ stages:          # List of stages for jobs, and their order of execution
 build-job:   
   stage: build  
   script:
-    - python --version
+    - echo "Билд программы"
+    - test_example.py  #python -m build 
+    # - python --version
     # - "curl -X POST --fail -F token=TOKEN -F ref=REF_NAME https://gitlab.com/api/v4/projects/80345628/trigger/pipeline"
     # - python -m test_example.py
 
@@ -44,7 +46,7 @@ lint-test-job:   # This job also runs in the test stage.
 
 deploy-job:      # This job runs in the deploy stage.
   stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
-  environment: production
+  environment: production   #?
   script:
     - echo "Deploying application..."
     - echo "Application successfully deployed."
