@@ -119,6 +119,7 @@ publish:
   stage: publish
   script:
     - |
+
       cat << EOF > ~/.pypirc
       [distutils]
       index-servers = gitlab
