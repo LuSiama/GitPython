@@ -23,31 +23,32 @@ default:
     - export NORMALIZED_NAME=$(echo "${CI_PROJECT_NAME}" | tr '-' '_')
 
 # Template for Python-based jobs
-.python-job:
-  image: python:${PYTHON_VERSION}
-  before_script:
-    # First normalize package name
-    - export NORMALIZED_NAME=$(echo "${CI_PROJECT_NAME}" | tr '-' '_')
-    # Then install Python dependencies
-    - pip install --upgrade pip
-    - pip install build twine setuptools wheel
-  cache:
-    paths:
-      - ${PIP_CACHE_DIR}
+# .python-job:
+#   image: python:${PYTHON_VERSION}
+#   before_script:
+#     # First normalize package name
+#     - export NORMALIZED_NAME=$(echo "${CI_PROJECT_NAME}" | tr '-' '_')
+#     # Then install Python dependencies
+#     - pip install --upgrade pip
+#     - pip install build twine setuptools wheel
+#   cache:
+#     paths:
+#       - ${PIP_CACHE_DIR}
 
 # Template for Python + Cosign jobs
-.python+cosign-job:
-  extends: .python-job
-  before_script:
-    # First normalize package name
-    - export NORMALIZED_NAME=$(echo "${CI_PROJECT_NAME}" | tr '-' '_')
-    # Then install dependencies
-    - apt-get update && apt-get install -y curl wget
-    - wget -O cosign https://github.com/sigstore/cosign/releases/download/v2.2.3/cosign-linux-amd64
-    - chmod +x cosign && mv cosign /usr/local/bin/
-    - export COSIGN_EXPERIMENTAL=1
-    - pip install --upgrade pip
-    - pip install build twine setuptools wheel
+# .python+cosign-job:
+#   extends: .python-job
+#   before_script:
+#     # First normalize package name
+#     - export NORMALIZED_NAME=$(echo "${CI_PROJECT_NAME}" | tr '-' '_')
+#     # Then install dependencies
+#     - apt-get update && apt-get install -y curl wget
+#     - wget -O cosign https://github.com/sigstore/cosign/releases/download/v2.2.3/cosign-linux-amd64
+#     - chmod +x cosign && mv cosign /usr/local/bin/
+#     - export COSIGN_EXPERIMENTAL=1
+#     - pip install --upgrade pip
+#     - pip install build twine setuptools wheel
+
 stages:
   - build
   - verify
@@ -56,7 +57,7 @@ stages:
   - consumer_verification
 
 build:
-  extends: .python-job
+  #extends: .python-job
   stage: build
   script:
     # Initialize git repo with actual content
@@ -84,7 +85,7 @@ build:
       - pyproject.toml
 
 verify:
-  extends: .python+cosign-job
+  #extends: .python+cosign-job
   stage: verify
   script:
     - |
@@ -115,7 +116,7 @@ verify:
       fi
 
 publish:
-  extends: .python-job
+  #extends: .python-job
   stage: publish
   script:
     - |
@@ -135,7 +136,7 @@ publish:
         dist/*.whl dist/*.tar.gz
 
 consumer_verification:
-  extends: .python+cosign-job
+  #extends: .python+cosign-job
   stage: consumer_verification
   script:
     - |
