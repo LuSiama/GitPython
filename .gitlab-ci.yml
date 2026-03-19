@@ -61,12 +61,12 @@ build:
   stage: build
   script:
     # Initialize git repo with actual content
-    - git init
-    - git config --global init.defaultBranch main
-    - git config --global user.email "ci@example.com"
-    - git config --global user.name "CI"
-    - git add .
-    - git commit -m "Initial commit"
+    # - git init
+    # - git config --global init.defaultBranch main
+    # - git config --global user.email "ci@example.com"
+    # - git config --global user.name "CI"
+    # - git add .
+    # - git commit -m "Initial commit"
 
     # Update package name, version, and homepage URL in pyproject.toml
     - sed -i "s/name = \".*\"/name = \"${NORMALIZED_NAME}\"/" pyproject.toml
