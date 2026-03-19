@@ -23,7 +23,7 @@ stages:          # List of stages for jobs, and their order of execution
 
 build-job:   
   stage: build  
-  tags: sred_project
+  tags: sred
   script:
     - echo "Билд программы"
     - test_example.py  #python -m build 
