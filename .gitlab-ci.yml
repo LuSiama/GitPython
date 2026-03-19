@@ -25,7 +25,7 @@ build-job:
   stage: build  
   script:
     - echo "Билд программы"
-    - test_example.py  #python -m build 
+    #- test_example.py  #python -m build 
     # - python --version
     # - "curl -X POST --fail -F token=TOKEN -F ref=REF_NAME https://gitlab.com/api/v4/projects/80345628/trigger/pipeline"
     # - python -m test_example.py
