@@ -69,20 +69,20 @@ build:
     # - git commit -m "Initial commit"
 
     # Update package name, version, and homepage URL in pyproject.toml
-    - sed -i "s/name = \".*\"/name = \"${NORMALIZED_NAME}\"/" pyproject.toml
-    - sed -i "s/version = \".*\"/version = \"${PACKAGE_VERSION}\"/" pyproject.toml
-    - sed -i "s|\"Homepage\" = \".*\"|\"Homepage\" = \"https://gitlab.com/${CI_PROJECT_PATH}\"|" pyproject.toml
+    - sed -i "s/name = \".*\"/name = \"${NORMALIZED_NAME}\"/" test_example.py
+    - sed -i "s/version = \".*\"/version = \"${PACKAGE_VERSION}\"/" test_example.py
+    - sed -i "s|\"Homepage\" = \".*\"|\"Homepage\" = \"https://gitlab.com/${CI_PROJECT_PATH}\"|" test_example.py
 
     # Debug: show updated file
-    - echo "Updated pyproject.toml contents:"
-    - cat pyproject.toml
+    - echo "Updated test_example.py contents:"
+    - cat test_example.py
 
     # Build package
     - python -m build
   artifacts:
     paths:
       - dist/
-      - pyproject.toml
+      - test_example.py
 
 verify:
   #extends: .python+cosign-job
