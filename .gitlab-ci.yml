@@ -119,7 +119,6 @@ publish:
   stage: publish
   script:
     - |
-      # Configure PyPI settings for GitLab package registry
       cat << EOF > ~/.pypirc
       [distutils]
       index-servers = gitlab
@@ -129,7 +128,6 @@ publish:
       password = ${CI_JOB_TOKEN}
       EOF
 
-      # Upload packages using twine
       TWINE_PASSWORD=${CI_JOB_TOKEN} TWINE_USERNAME=gitlab-ci-token \
         twine upload --repository-url ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/pypi \
         dist/*.whl dist/*.tar.gz
@@ -139,18 +137,14 @@ consumer_verification:
   stage: consumer_verification
   script:
     - |
-      # Initialize git repo for setuptools_scm
       git init
       git config --global init.defaultBranch main
 
-      # Create directory for downloading packages
       mkdir -p pkg signatures
 
-      # Download the specific wheel version
       pip download --index-url "https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.com/api/v4/projects/${CI_PROJECT_ID}/packages/pypi/simple" \
           "${NORMALIZED_NAME}==${PACKAGE_VERSION}" --no-deps -d ./pkg --verbose
 
-      # Download the specific source distribution version
       pip download --no-binary :all: \
           --index-url "https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.com/api/v4/projects/${CI_PROJECT_ID}/packages/pypi/simple" \
           "${NORMALIZED_NAME}==${PACKAGE_VERSION}" --no-deps -d ./pkg --verbose
