@@ -50,39 +50,148 @@ default:
     - pip install build twine setuptools wheel
 stages:
   - build
-  - sign
   - verify
   - publish
   - publish_signatures
   - consumer_verification
 
-stages:          
-  - build 
-  - test
-  - deploy
+build:
+  extends: .python-job
+  stage: build
+  script:
+    # Initialize git repo with actual content
+    - git init
+    - git config --global init.defaultBranch main
+    - git config --global user.email "ci@example.com"
+    - git config --global user.name "CI"
+    - git add .
+    - git commit -m "Initial commit"
 
-build-job:   
-  stage: build  
+    # Update package name, version, and homepage URL in pyproject.toml
+    - sed -i "s/name = \".*\"/name = \"${NORMALIZED_NAME}\"/" pyproject.toml
+    - sed -i "s/version = \".*\"/version = \"${PACKAGE_VERSION}\"/" pyproject.toml
+    - sed -i "s|\"Homepage\" = \".*\"|\"Homepage\" = \"https://gitlab.com/${CI_PROJECT_PATH}\"|" pyproject.toml
+
+    # Debug: show updated file
+    - echo "Updated pyproject.toml contents:"
+    - cat pyproject.toml
+
+    # Build package
+    - python -m build
+  artifacts:
+    paths:
+      - dist/
+      - pyproject.toml
+
+verify:
+  extends: .python+cosign-job
+  stage: verify
   script:
-    - echo "Билд программы"
-    - python -m pytest test_example.py  
-    # - python --version
-    # - python -m test_example.py
-unit-test-job:   # This job runs in the test stage.
-  stage: test    # It only starts when the job in the build stage completes successfully.
+    - |
+      failed=0
+
+      for file in dist/*.whl dist/*.tar.gz; do
+        if [ -f "$file" ]; then
+          filename=$(basename "$file")
+
+          echo "Verifying file: $file"
+          echo "Using signature: dist/${filename}.sig"
+          echo "Using certificate: dist/${filename}.crt"
+
+          if ! cosign verify-blob \
+            --signature "dist/${filename}.sig" \
+            --certificate "dist/${filename}.crt" \
+            --certificate-identity "${CERTIFICATE_IDENTITY}" \
+            --certificate-oidc-issuer "${CERTIFICATE_OIDC_ISSUER}" \
+            "$file"; then
+            echo "Verification failed for $filename"
+            failed=1
+          fi
+        fi
+      done
+
+      if [ $failed -eq 1 ]; then
+        exit 1
+      fi
+
+publish:
+  extends: .python-job
+  stage: publish
   script:
-    - echo "Running unit tests... This will take about 60 seconds."
-    - sleep 60
-    - echo "Code coverage is 90%"
-lint-test-job:   # This job also runs in the test stage.
-  stage: test    # It can run at the same time as unit-test-job (in parallel).
+    - |
+      # Configure PyPI settings for GitLab package registry
+      cat << EOF > ~/.pypirc
+      [distutils]
+      index-servers = gitlab
+      [gitlab]
+      repository = ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/pypi
+      username = gitlab-ci-token
+      password = ${CI_JOB_TOKEN}
+      EOF
+
+      # Upload packages using twine
+      TWINE_PASSWORD=${CI_JOB_TOKEN} TWINE_USERNAME=gitlab-ci-token \
+        twine upload --repository-url ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/pypi \
+        dist/*.whl dist/*.tar.gz
+
+consumer_verification:
+  extends: .python+cosign-job
+  stage: consumer_verification
   script:
-    - echo "Linting code... This will take about 10 seconds."
-    - sleep 10
-    - echo "No lint issues found."
-deploy-job:      # This job runs in the deploy stage.
-  stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
-  environment: production   #?
-  script:
-    - echo "Deploying application..."
-    - echo "Application successfully deployed."
+    - |
+      # Initialize git repo for setuptools_scm
+      git init
+      git config --global init.defaultBranch main
+
+      # Create directory for downloading packages
+      mkdir -p pkg signatures
+
+      # Download the specific wheel version
+      pip download --index-url "https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.com/api/v4/projects/${CI_PROJECT_ID}/packages/pypi/simple" \
+          "${NORMALIZED_NAME}==${PACKAGE_VERSION}" --no-deps -d ./pkg --verbose
+
+      # Download the specific source distribution version
+      pip download --no-binary :all: \
+          --index-url "https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.com/api/v4/projects/${CI_PROJECT_ID}/packages/pypi/simple" \
+          "${NORMALIZED_NAME}==${PACKAGE_VERSION}" --no-deps -d ./pkg --verbose
+
+      failed=0
+      for file in pkg/*.whl pkg/*.tar.gz; do
+        if [ -f "$file" ]; then
+          filename=$(basename "$file")
+
+          sig_url="${GENERIC_PACKAGE_BASE_URL}/${filename}.sig"
+          cert_url="${GENERIC_PACKAGE_BASE_URL}/${filename}.crt"
+
+          echo "Downloading signatures for $filename"
+          echo "Signature URL: $sig_url"
+          echo "Certificate URL: $cert_url"
+
+          # Download signatures
+          curl --fail --silent --show-error \
+               --header "JOB-TOKEN: ${CI_JOB_TOKEN}" \
+               --output "signatures/${filename}.sig" \
+               "$sig_url"
+
+          curl --fail --silent --show-error \
+               --header "JOB-TOKEN: ${CI_JOB_TOKEN}" \
+               --output "signatures/${filename}.crt" \
+               "$cert_url"
+
+          # Verify signature
+          if ! cosign verify-blob \
+            --signature "signatures/${filename}.sig" \
+            --certificate "signatures/${filename}.crt" \
+            --certificate-identity "${CERTIFICATE_IDENTITY}" \
+            --certificate-oidc-issuer "${CERTIFICATE_OIDC_ISSUER}" \
+            "$file"; then
+            echo "Signature verification failed"
+            failed=1
+          fi
+        fi
+      done
+
+      if [ $failed -eq 1 ]; then
+        echo "Verification failed for one or more packages"
+        exit 1
+      fi
