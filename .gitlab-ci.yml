@@ -1,6 +1,7 @@
 default:
   tags:
     - dmosk
+    - doker
 
 stages:
   - test
