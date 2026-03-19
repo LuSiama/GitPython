@@ -5,7 +5,7 @@ stages:
 build:
   stage: build
   script:
-    - python -m test_example.py
+    - ./test_example.py
 
 test:
   stage: test
