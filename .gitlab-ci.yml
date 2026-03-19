@@ -52,8 +52,7 @@ default:
 stages:
   - build
   - verify
-  - publish
-  - publish_signatures
+  #- publish
   - consumer_verification
 
 build:
@@ -115,25 +114,23 @@ verify:
         exit 1
       fi
 
-publish:
-  #extends: .python-job
-  stage: publish
-  script:
-    - |
-      # Configure PyPI settings for GitLab package registry
-      cat << EOF > ~/.pypirc
-      [distutils]
-      index-servers = gitlab
-      [gitlab]
-      repository = ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/pypi
-      username = gitlab-ci-token
-      password = ${CI_JOB_TOKEN}
-      EOF
+# publish:
+#   #extends: .python-job
+#   stage: publish
+#   script:
+#     - |
+#       cat << EOF > ~/.pypirc
+#       [distutils]
+#       index-servers = gitlab
+#       [gitlab]
+#       repository = ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/pypi
+#       username = gitlab-ci-token
+#       password = ${CI_JOB_TOKEN}
+#       EOF
 
-      # Upload packages using twine
-      TWINE_PASSWORD=${CI_JOB_TOKEN} TWINE_USERNAME=gitlab-ci-token \
-        twine upload --repository-url ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/pypi \
-        dist/*.whl dist/*.tar.gz
+#       TWINE_PASSWORD=${CI_JOB_TOKEN} TWINE_USERNAME=gitlab-ci-token \
+#         twine upload --repository-url ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/pypi \
+#         dist/*.whl dist/*.tar.gz
 
 consumer_verification:
   #extends: .python+cosign-job
