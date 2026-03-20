@@ -5,9 +5,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9975ee45-7583-4dc0-951d-75d94a267152" name="Изменения" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/tests.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test_example/Analysis-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test_example/COLLECT-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test_example/EXE-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test_example/PKG-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test_example/PYZ-00.pyz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test_example/PYZ-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test_example/base_library.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test_example/test_example.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test_example/test_example.pkg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test_example/warn-test_example.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test_example/xref-test_example.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test_example/_internal/VCRUNTIME140.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test_example/_internal/VCRUNTIME140_1.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test_example/_internal/_asyncio.pyd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test_example/_internal/_bz2.pyd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test_example/_internal/_ctypes.pyd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test_example/_internal/_decimal.pyd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test_example/_internal/_elementtree.pyd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test_example/_internal/_hashlib.pyd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test_example/_internal/_lzma.pyd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test_example/_internal/_multiprocessing.pyd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test_example/_internal/_overlapped.pyd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test_example/_internal/_queue.pyd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test_example/_internal/_socket.pyd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test_example/_internal/_ssl.pyd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test_example/_internal/_uuid.pyd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test_example/_internal/_wmi.pyd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test_example/_internal/base_library.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test_example/_internal/libcrypto-3.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test_example/_internal/libffi-8.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test_example/_internal/libssl-3.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test_example/_internal/pyexpat.pyd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test_example/_internal/python313.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test_example/_internal/select.pyd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test_example/_internal/setuptools/_vendor/importlib_metadata-8.7.1.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test_example/_internal/setuptools/_vendor/importlib_metadata-8.7.1.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test_example/_internal/setuptools/_vendor/importlib_metadata-8.7.1.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test_example/_internal/setuptools/_vendor/importlib_metadata-8.7.1.dist-info/REQUESTED" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test_example/_internal/setuptools/_vendor/importlib_metadata-8.7.1.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test_example/_internal/setuptools/_vendor/importlib_metadata-8.7.1.dist-info/licenses/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test_example/_internal/setuptools/_vendor/importlib_metadata-8.7.1.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test_example/_internal/setuptools/_vendor/jaraco/text/Lorem ipsum.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test_example/_internal/unicodedata.pyd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/test_example/test_example.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lint_gitlab.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_example.spec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/tests.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/tests.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_example.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_example.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +71,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -37,11 +87,14 @@
   "keyToString": {
     "Python тесты.Python тесты в test_example.py.executor": "Run",
     "Python тесты.Python тесты для test_example.test_my_function.executor": "Run",
+    "Python тесты.pytest в test_example.py.executor": "Run",
     "Python тесты.pytest в test_fix.py.executor": "Run",
     "Python.PythonNew.executor": "Run",
+    "Python.app.executor": "Run",
+    "Python.lint_gitlab.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "Rebase main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -96,7 +149,13 @@
       <option name="presentableId" value="Default" />
       <updated>1773737751128</updated>
       <workItem from="1773737752084" duration="13446000" />
-      <workItem from="1773811595210" duration="5059000" />
+      <workItem from="1773811595210" duration="9552000" />
+      <workItem from="1773896674161" duration="5363000" />
+      <workItem from="1773984393432" duration="4879000" />
+      <workItem from="1773993432945" duration="4217000" />
+      <workItem from="1773997992095" duration="56000" />
+      <workItem from="1773998233465" duration="318000" />
+      <workItem from="1773998636437" duration="6018000" />
     </task>
     <servers />
   </component>
@@ -115,8 +174,11 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/tests$.coverage" NAME="Результаты покрытия " MODIFIED="1773812058863" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/tests$pytest__test_fix_py.coverage" NAME="Результаты покрытия pytest в test_fix.py" MODIFIED="1773812804538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/tests$.coverage" NAME="Результаты покрытия " MODIFIED="1774014262716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/tests$lint_gitlab.coverage" NAME="Результаты покрытия lint_gitlab" MODIFIED="1774000220182" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/tests$app.coverage" NAME="Результаты покрытия app" MODIFIED="1774004491622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/tests$pytest__test_fix_py.coverage" NAME="Результаты покрытия pytest в test_fix.py" MODIFIED="1773999754529" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/tests$PythonNew.coverage" NAME="Результаты покрытия PythonNew" MODIFIED="1773737918611" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
+    <SUITE FILE_PATH="coverage/tests$pytest__test_example_py.coverage" NAME="Результаты покрытия pytest в test_example.py" MODIFIED="1773999821766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
