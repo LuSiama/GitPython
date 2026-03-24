@@ -7,7 +7,20 @@ build:
   script:
     - python ./test_example.py
 
+# build_app:
+#   stage: build
+#   script:
+#     - python ./app.py
+
+build_ruff:
+  stage: build
+  script:
+    - ruff check --output-format=gitlab --output-file=puff.toml
+    #code-quality-report.json
+
 test:
   stage: test
   script:
     - python -m pytest test_example.py
+
+
