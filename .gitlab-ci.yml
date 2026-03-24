@@ -7,10 +7,10 @@ build:
   script:
     - python ./test_example.py
 
-build_app:
-  stage: build
-  script:
-    - python ./app.py
+# build_app:
+#   stage: build
+#   script:
+#     - python ./app.py
 
 build_ruff:
   stage: build
