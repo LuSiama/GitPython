@@ -12,6 +12,11 @@ build_app:
   script:
     - python ./app.py
 
+build_ruff:
+  stage: build
+  script:
+    - ruff check --output-format=gitlab --output-file=code-quality-report.json
+
 test:
   stage: test
   script:
