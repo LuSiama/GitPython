@@ -15,7 +15,8 @@ build:
 build_ruff:
   stage: build
   script:
-    - ruff check --output-format=gitlab --output-file=code-quality-report.json
+    - ruff check --output-format=gitlab --output-file=puff.toml
+    #code-quality-report.json
 
 test:
   stage: test
