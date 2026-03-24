@@ -7,12 +7,14 @@ build:
   script:
     - python ./test_example.py
 
+build_app:
+  stage: build
+  script:
+    - python ./app.py
+
 test:
   stage: test
   script:
     - python -m pytest test_example.py
 
-test_app:
-  stage: test
-  script:
-    - python ./app.py
+
