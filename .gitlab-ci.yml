@@ -1,7 +1,7 @@
 stages:
   - build
   - test
-  - deploy
+  # - deploy
 
 build:
   stage: build
@@ -24,10 +24,10 @@ test:
   script:
     - python -m pytest test_example.py
 
-deploy:
-  stage: deploy
-  tags: ["python"]
-  script:
-    - https://www.pythonanywhere.com/user/Tatiyana/files/home/Tatiyana/testpythongit
-    - echo "git pull"
+# deploy:
+#   stage: deploy
+#   tags: ["python"]
+#   script:
+#     - https://www.pythonanywhere.com/user/Tatiyana/files/home/Tatiyana/testpythongit
+#     - echo "git pull"
 
