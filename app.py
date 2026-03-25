@@ -2,16 +2,27 @@ from flask import Flask, request
 import git
 app = Flask(__name__)
 
+# @app.route("/update_server", methods=['POST'])
+# def webhook():
+#     if request.method == 'POST':
+#         repo = git.Repo('https://tatiyana.pythonanywhere.com')
+#         origin = repo.remotes.origin
+#
+#         origin.pull()
+#         return 'Обновление прошло успешно', 200
+#     else:
+#         return 'Что-то пошло не так', 400
+
 @app.route("/update_server", methods=['POST'])
 def webhook():
     if request.method == 'POST':
-        repo = git.Repo('https://tatiyana.pythonanywhere.com')
+        repo = git.Repo('https://www.pythonanywhere.com/user/Tatiyana/files/home/Tatiyana/testpythongit')
         origin = repo.remotes.origin
 
         origin.pull()
-        return '', 200
+        return 'Обновление прошло успешно', 200
     else:
-        return 'Что-то пошло не так', 400
+       return 'Что-то пошло не так', 400
 
 # @app.route("/")       #?
 # def home():
