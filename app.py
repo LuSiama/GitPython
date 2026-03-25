@@ -13,7 +13,7 @@ def webhook():
     else:
         return 'Что-то пошло не так', 400
 
-# @app.route("/")
+# @app.route("/")       #?
 # def home():
 #     return "Вовка морковка!"
 #
