@@ -28,6 +28,6 @@ deploy:
   stage: deploy
   tags: ["python"]
   script:
-    - git pull https://www.pythonanywhere.com/user/Tatiyana/files/home/Tatiyana/testpythongit/.git/info/exclude?edit
+    - https://www.pythonanywhere.com/user/Tatiyana/files/home/Tatiyana/testpythongit
     - echo "git pull"
 
