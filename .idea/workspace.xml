@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9975ee45-7583-4dc0-951d-75d94a267152" name="Изменения" comment="Изменения в app.py 1 (проверка pyll)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="9975ee45-7583-4dc0-951d-75d94a267152" name="Изменения" comment="Изменения в app.py 2 (все пошло не по плану)">
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,16 +22,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitLabMergeRequestFiltersHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPENED",
-    "assignee": {
-      "type": "org.jetbrains.plugins.gitlab.mergerequest.ui.filters.GitLabMergeRequestsFiltersValue.MergeRequestsMemberFilterValue.MergeRequestsAssigneeFilterValue",
-      "username": "LuSiama",
-      "fullname": "LuSiama"
+  <component name="GitLabMergeRequestFiltersHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPENED&quot;,
+    &quot;assignee&quot;: {
+      &quot;type&quot;: &quot;org.jetbrains.plugins.gitlab.mergerequest.ui.filters.GitLabMergeRequestsFiltersValue.MergeRequestsMemberFilterValue.MergeRequestsAssigneeFilterValue&quot;,
+      &quot;username&quot;: &quot;LuSiama&quot;,
+      &quot;fullname&quot;: &quot;LuSiama&quot;
     }
   }
-}]]></component>
+}</component>
   <component name="GitLabMergeRequestsSettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;first&quot;: &quot;https://gitlab.com/LuSiama/testpythongit.git&quot;,
@@ -51,35 +50,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python тесты.Python тесты в test_example.py.executor": "Run",
-    "Python тесты.Python тесты для test_example.test_my_function.executor": "Run",
-    "Python тесты.pytest в test_example.py.executor": "Run",
-    "Python тесты.pytest в test_fix.py.executor": "Run",
-    "Python.PythonNew.executor": "Run",
-    "Python.app.executor": "Run",
-    "Python.lint_gitlab.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true",
-    "Сервер Flask.Flask (app.py).executor": "Run",
-    "Сервер Flask.tests.executor": "Run"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python тесты.Python тесты в test_example.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python тесты.Python тесты для test_example.test_my_function.executor&quot;: &quot;Run&quot;,
+    &quot;Python тесты.pytest в test_example.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python тесты.pytest в test_fix.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.PythonNew.executor&quot;: &quot;Run&quot;,
+    &quot;Python.app.executor&quot;: &quot;Run&quot;,
+    &quot;Python.lint_gitlab.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;Сервер Flask.Flask (app.py).executor&quot;: &quot;Run&quot;,
+    &quot;Сервер Flask.tests.executor&quot;: &quot;Run&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Tata\Desktop\tests" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python тесты.Python тесты для test_example.test_my_function">
     <configuration name="tests" type="Python.FlaskServer">
       <module name="tests" />
       <option name="target" value="$PROJECT_DIR$/app.py" />
@@ -143,7 +142,7 @@
       <workItem from="1773998233465" duration="318000" />
       <workItem from="1773998636437" duration="6938000" />
       <workItem from="1774341014824" duration="4962000" />
-      <workItem from="1774415087297" duration="6555000" />
+      <workItem from="1774415087297" duration="6881000" />
     </task>
     <task id="LOCAL-00001" summary="Изменения в app.py 1 (проверка pyll)">
       <option name="closed" value="true" />
@@ -153,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774428054415</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Изменения в app.py 2 (все пошло не по плану)">
+      <option name="closed" value="true" />
+      <created>1774432080041</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1774432080041</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,24 +179,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Изменения в app.py 1 (проверка pyll)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Изменения в app.py 1 (проверка pyll)" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app.py</url>
-          <line>18</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Изменения в app.py 2 (все пошло не по плану)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Изменения в app.py 2 (все пошло не по плану)" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/tests$.coverage" NAME="Результаты покрытия " MODIFIED="1774014262716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/tests$lint_gitlab.coverage" NAME="Результаты покрытия lint_gitlab" MODIFIED="1774000220182" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/tests$app.coverage" NAME="Результаты покрытия app" MODIFIED="1774004491622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/tests$Flask__app_py_.coverage" NAME="Результаты покрытия Flask (app.py)" MODIFIED="1774431936536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/tests$Flask__app_py_.coverage" NAME="Результаты покрытия Flask (app.py)" MODIFIED="1774432035411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/tests$pytest__test_fix_py.coverage" NAME="Результаты покрытия pytest в test_fix.py" MODIFIED="1773999754529" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/tests$PythonNew.coverage" NAME="Результаты покрытия PythonNew" MODIFIED="1773737918611" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
     <SUITE FILE_PATH="coverage/tests$pytest__test_example_py.coverage" NAME="Результаты покрытия pytest в test_example.py" MODIFIED="1773999821766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

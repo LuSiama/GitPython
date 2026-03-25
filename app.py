@@ -16,7 +16,7 @@ app = Flask(__name__)
 @app.route("/update_server", methods=['POST'])
 def webhook():
     if request.method == 'POST':
-        repo = git.Repo('https://www.pythonanywhere.com/user/Tatiyana/files/home/Tatiyana/testpythongit')
+        repo = git.Repo('https://tatiyana.pythonanywhere.com')
         origin = repo.remotes.origin
 
         origin.pull()
