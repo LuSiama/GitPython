@@ -13,10 +13,10 @@ app = Flask(__name__)
 #     else:
 #         return 'Что-то пошло не так', 400
 
-@app.route("/update_server", methods=['POST'])
+@app.route("/", methods=['GET'])
 def webhook():
-    if request.method == 'POST':
-        repo = git.Repo('https://tatiyana.pythonanywhere.com')
+    if request.method == 'GET':
+        repo = git.Repo('~/GitPython/.git')
         origin = repo.remotes.origin
 
         origin.pull()

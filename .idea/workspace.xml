@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9975ee45-7583-4dc0-951d-75d94a267152" name="Изменения" comment="Изменения в app.py 2 (все пошло не по плану)">
+    <list default="true" id="9975ee45-7583-4dc0-951d-75d94a267152" name="Изменения" comment="Изменения в app.py 3 (все пошло не по плану)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +79,7 @@
       <recent name="C:\Users\Tata\Desktop\tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Python тесты.Python тесты для test_example.test_my_function">
+  <component name="RunManager">
     <configuration name="tests" type="Python.FlaskServer">
       <module name="tests" />
       <option name="target" value="$PROJECT_DIR$/app.py" />
@@ -142,7 +143,7 @@
       <workItem from="1773998233465" duration="318000" />
       <workItem from="1773998636437" duration="6938000" />
       <workItem from="1774341014824" duration="4962000" />
-      <workItem from="1774415087297" duration="6881000" />
+      <workItem from="1774415087297" duration="10219000" />
     </task>
     <task id="LOCAL-00001" summary="Изменения в app.py 1 (проверка pyll)">
       <option name="closed" value="true" />
@@ -160,7 +161,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774432080041</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Изменения в app.py 3 (все пошло не по плану)">
+      <option name="closed" value="true" />
+      <created>1774432355286</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1774432355286</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,13 +189,14 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Изменения в app.py 1 (проверка pyll)" />
     <MESSAGE value="Изменения в app.py 2 (все пошло не по плану)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Изменения в app.py 2 (все пошло не по плану)" />
+    <MESSAGE value="Изменения в app.py 3 (все пошло не по плану)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Изменения в app.py 3 (все пошло не по плану)" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/tests$.coverage" NAME="Результаты покрытия " MODIFIED="1774014262716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/tests$.coverage" NAME="Результаты покрытия " MODIFIED="1774432563282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/tests$lint_gitlab.coverage" NAME="Результаты покрытия lint_gitlab" MODIFIED="1774000220182" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/tests$app.coverage" NAME="Результаты покрытия app" MODIFIED="1774004491622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/tests$Flask__app_py_.coverage" NAME="Результаты покрытия Flask (app.py)" MODIFIED="1774432035411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/tests$Flask__app_py_.coverage" NAME="Результаты покрытия Flask (app.py)" MODIFIED="1774435282753" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/tests$pytest__test_fix_py.coverage" NAME="Результаты покрытия pytest в test_fix.py" MODIFIED="1773999754529" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/tests$PythonNew.coverage" NAME="Результаты покрытия PythonNew" MODIFIED="1773737918611" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
     <SUITE FILE_PATH="coverage/tests$pytest__test_example_py.coverage" NAME="Результаты покрытия pytest в test_example.py" MODIFIED="1773999821766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
