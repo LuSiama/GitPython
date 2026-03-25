@@ -26,6 +26,7 @@ test:
 
 deploy:
   stage: deploy
+  tags: ["puthon"]
   script:
     - git pull https://www.pythonanywhere.com/user/Tatiyana/consoles/45958066/
     - echo "git pull"
