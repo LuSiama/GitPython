@@ -28,7 +28,11 @@ deploy:
   stage: deploy
   tags: ["python"]
   script:
-    - python ./app.py
-#     - https://tatiyana.pythonanywhere.com
-    #- echo "git push origin main"
+    - mkdir -p public
+    - cp index.html public/
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
 
