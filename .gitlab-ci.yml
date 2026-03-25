@@ -1,6 +1,7 @@
 stages:
   - build
   - test
+  - deploy
 
 build:
   stage: build
@@ -23,4 +24,8 @@ test:
   script:
     - python -m pytest test_example.py
 
+deploy:
+  stage: deploy
+  script:
+    - git pull https://www.pythonanywhere.com/user/Tatiyana/files/home/Tatiyana/testpythongit
 
