@@ -24,15 +24,24 @@ test:
   script:
     - python -m pytest test_example.py
 
+# deploy:
+#   stage: deploy
+#   tags: ["python"]
+#   script:
+#     - mkdir -p public
+#     - cp index.html public/
+#   artifacts:
+#     paths:
+#       - public
+#   only:
+#     - main
+
 deploy:
   stage: deploy
-  tags: ["python"]
   script:
-    - mkdir -p public
-    - cp index.html public/
-  artifacts:
-    paths:
-      - public
+    - rsync -av --delete $CI_PROJECT_DIR/build/ https://tatiyana.pythonanywhere.com/
   only:
     - main
+  tags:
+    - python
 
