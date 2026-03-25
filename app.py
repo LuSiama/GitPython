@@ -13,20 +13,9 @@ app = Flask(__name__)
 #     else:
 #         return 'Что-то пошло не так', 400
 
-@app.route("/", methods=['GET'])
-def webhook():
-    if request.method == 'GET':
-        repo = git.Repo('~/GitPython/.git')
-        origin = repo.remotes.origin
+@app.route("/")
+def home():
+    return "Вовка морковка1!"
 
-        origin.pull()
-        return 'Обновление прошло успешно', 200
-    else:
-       return 'Что-то пошло не так', 400
-
-# @app.route("/")       #?
-# def home():
-#     return "Вовка морковка1!"
-#
-# if __name__ == '__main__':
-#     app.run(host='192.168.136.138')
+if __name__ == '__main__':
+    app.run(host='192.168.136.138')
