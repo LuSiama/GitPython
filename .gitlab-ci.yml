@@ -29,5 +29,5 @@ deploy:
   tags: ["python"]
   script:
     - https://tatiyana.pythonanywhere.com
-    - echo "git push origin main"
+    #- echo "git push origin main"
 
