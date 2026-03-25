@@ -26,7 +26,7 @@ def webhook():
 
 # @app.route("/")       #?
 # def home():
-#     return "Вовка морковка!"
+#     return "Вовка морковка1!"
 #
 # if __name__ == '__main__':
 #     app.run(host='192.168.136.138')
