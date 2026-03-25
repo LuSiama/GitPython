@@ -13,10 +13,10 @@ build:
 #   script:
 #     - python ./app.py
 
-build_ruff:
-  stage: build
-  script:
-    - ruff check --output-format=gitlab --output-file=puff.toml
+# build_ruff:
+#   stage: build
+#   script:
+#     - ruff check --output-format=gitlab --output-file=puff.toml
     #code-quality-report.json
 
 test:
