@@ -24,21 +24,20 @@ test:
   script:
     - python -m pytest test_example.py
 
-deploy_pack:
-  stage: deploy
-  tags: ["python"]
-  script:
-    - mkdir -p public
-    - cp app.py public/
-  artifacts:
-    paths:
-      - public
-  only:
-    - main
+# deploy_pack:
+#   stage: deploy
+#   tags: ["python"]
+#   script:
+#     - mkdir -p public
+#     - cp app.py public/
+#   artifacts:
+#     paths:
+#       - public
+#   only:
+#     - main
 
 deploy:
   stage: deploy
-  image: deploy_pack
   script:
     - rsync -av app.py tatiyana.pythonanywhere.com
   only:
