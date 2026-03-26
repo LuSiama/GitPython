@@ -38,6 +38,7 @@ test:
 
 deploy:
   stage: deploy
+  GIT_STRATEGY: none
   script:
     - rsync -av app.py tatiyana.pythonanywhere.com
   only:
@@ -45,3 +46,4 @@ deploy:
   tags:
     - python
 
+#$CI_PROJECT_URL - URL проекта
