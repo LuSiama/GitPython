@@ -39,7 +39,7 @@ test:
 deploy:
   stage: deploy
   script:
-    - rsync -av https://gitlab.com/LuSiama/testpythongit.git https://tatiyana.pythonanywhere.com
+    - rsync -av app/py https://tatiyana.pythonanywhere.com
   only:
     - main
   tags:
