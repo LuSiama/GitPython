@@ -39,6 +39,7 @@ test:
 deploy:
   stage: deploy
   script:
+    #- $ENV_TEST
     - rsync -av app.py tatiyana.pythonanywhere.com
   only:
     - main
