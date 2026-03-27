@@ -13,10 +13,16 @@ def home():
 
 
 # Webhook endpoint to handle GitHub pushes
-@app.route('/gitlab-webhook', methods=['POST'])
-def gitlab_webhook():
+
+# @app.route('/gitlab-webhook', methods=['POST'])
+# def gitlab_webhook():
+#     # Verify the request is from GitHub (see Section 4.5)
+#     signature = request.headers.get('X-Gitlab-Token')
+
+@app.route('/github-webhook', methods=['POST'])
+def github_webhook():
     # Verify the request is from GitHub (see Section 4.5)
-    signature = request.headers.get('X-Gitlab-Token')
+    signature = request.headers.get('X-Hub-Signature-256')
     if not verify_signature(request.data, signature, 'ce022f09d3ab982c5c49efe5374659328f1c515e158f767bdb53f655dc70f6e8'):
         abort(403)  # Forbidden if signature invalid
 
