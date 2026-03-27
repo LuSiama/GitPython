@@ -13,7 +13,7 @@ def home():
 
 
 # Webhook endpoint to handle GitHub pushes
-
+# GitLab
 # @app.route('/gitlab-webhook', methods=['POST'])
 # def gitlab_webhook():
 #     # Verify the request is from GitHub (see Section 4.5)
