@@ -9,7 +9,7 @@ app = Flask(__name__)
 # Your existing routes (e.g., the home page)
 @app.route('/')
 def home():
-    return "Вовка морковка! 🌟"
+    return "Вовка морковка! 🌟✨"
 
 
 # Webhook endpoint to handle GitHub pushes
